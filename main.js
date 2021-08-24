@@ -13,10 +13,13 @@ button.addEventListener('click', ()=>{
         {
              
            const profile=document.createElement('img')
+           const hr=document.createElement('hr')
            const data= JSON.parse(xhr.responseText)
            profile.setAttribute('src',data.avatar_url)
            const cont=document.getElementById('image-con')
            cont.appendChild(profile)
+           cont.appendChild(hr)
+
         }
     }
     xhr.send()
