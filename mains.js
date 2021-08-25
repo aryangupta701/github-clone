@@ -14,8 +14,7 @@ button.addEventListener('click', ()=>{
            const br=document.createElement('br')
            const bro=document.createElement('br')
            const profile=document.createElement('img')
-           const follower=document.createElement('span')
-           const following=document.createElement('span')
+           const follow=document.createElement('div')
            const name=document.createElement('span')
            const bio=document.createElement('p')
            const hr=document.createElement('hr')
@@ -26,16 +25,19 @@ button.addEventListener('click', ()=>{
             //data taking from api
             //profile
            profile.setAttribute('src',data.avatar_url)
-           profile.setAttribute('style',"border-radius:50%; height: 100px ;margin-left:20px;  ")
+           profile.setAttribute('style',"border-radius:50%; height: 100px ;margin-left:20px;border:2px; border-color:2px black; ")
 
         //follows
-        follower.innerHTML=`${data.followers}`
-        following.innerHTML=`${data.following}`
+        follow.id='mainfollow'
+        follow.innerHTML=`<div class="follows">Followers <br> ${data.followers} </div>`
+
+        
  
         //name & bio 
         name.textContent=data.name
         bio.textContent=data.bio
-
+        name.id='name'
+        profile.id='imageuser'
         //first hr margin set
         hrone.setAttribute('style',"margin-top:0px;")
            const cont=document.getElementById('data-display')
@@ -45,12 +47,18 @@ button.addEventListener('click', ()=>{
            cont.appendChild(hr)
            cont.appendChild(bio)
            cont.appendChild(hrt)
-           cont.appendChild(follower)
-           cont.appendChild(following)
+           cont.appendChild(follow)
            cont.appendChild(br)
            cont.appendChild(bro)
 
-           
+           //for adding following sibling of followers 
+        const f=document.getElementById('mainfollow')
+        const following=document.createElement('div')
+        following.className='follows'
+        following.innerHTML=`Following <br> ${data.following}`
+         f.appendChild(following)
+        
+        
 
         }
     }

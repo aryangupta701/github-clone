@@ -40,3 +40,17 @@ margin-left: 0px;
 border-top-left-radius: 0px;
 border-bottom-left-radius:0px;
 }
+#name
+{
+    margin-left:20px;
+    font-size: 30px;
+}
+#mainfollow{
+    display: flex;
+    justify-content: space-around;
+}
+#follows
+{
+   width: 150px;
+   font-size: 25px;
+}
