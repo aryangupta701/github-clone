@@ -1,4 +1,4 @@
-const button=document.getElementById('search')
+const button=document.getElementById('search-button')
 const searchbox=document.getElementById('text-input')
 
 button.addEventListener('click', ()=>{
