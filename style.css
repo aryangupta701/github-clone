@@ -49,8 +49,13 @@ border-bottom-left-radius:0px;
     display: flex;
     justify-content: space-around;
 }
-#follows
+.follows
 {
    width: 150px;
-   font-size: 25px;
+   font-size: 20px;
+}
+#bioo
+{
+    text-align: justify;
+    font-size: 15px;
 }

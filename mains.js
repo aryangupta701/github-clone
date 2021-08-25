@@ -29,13 +29,14 @@ button.addEventListener('click', ()=>{
 
         //follows
         follow.id='mainfollow'
-        follow.innerHTML=`<div class="follows">Followers <br> ${data.followers} </div>`
+        follow.innerHTML=`<div class="follows" style="border-right:1px solid rgba(256,256,256,0.5); ">Followers <br> ${data.followers} </div>`
 
         
  
         //name & bio 
         name.textContent=data.name
         bio.textContent=data.bio
+        bio.id='bioo'
         name.id='name'
         profile.id='imageuser'
         //first hr margin set
