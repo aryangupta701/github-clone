@@ -13,12 +13,13 @@ button.addEventListener('click', ()=>{
         {
              
            const profile=document.createElement('img')
-           const hr=document.createElement('hr')
+        //    const hr=document.createElement('hr')
            const data= JSON.parse(xhr.responseText)
            profile.setAttribute('src',data.avatar_url)
-           const cont=document.getElementById('image-con')
+           profile.setAttribute('style',"border-radius:50%; height: 100px ;display:block; margin-left:auto ; margin-right: auto ; ")
+           const cont=document.getElementById('data-display')
            cont.appendChild(profile)
-           cont.appendChild(hr)
+           
 
         }
     }
