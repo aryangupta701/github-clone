@@ -5,12 +5,14 @@ body{
 }
 #back-color
 {
+
     border-radius: 15px;
     margin-right: auto;
     margin-left: auto;
     width: 350px;
-    height:60vh;
-background-color: rgba(235, 235, 217,0.7);
+    
+background-color: rgba(235, 235, 217,0.8);
+padding: 10px;
 }
 
 #search-bar
